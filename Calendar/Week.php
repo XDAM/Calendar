@@ -135,31 +135,31 @@ class Calendar_Week extends Calendar
      *
      * @access public
      */
-    function Calendar_Week($y, $m, $d, $firstDay = null)
+    function __construct($y, $m, $d, $firstDay = null)
     {
         include_once CALENDAR_ROOT.'Table/Helper.php';
-        parent::Calendar($y, $m, $d);
+        parent::__construct($y, $m, $d);
         $this->firstDay    = $this->defineFirstDayOfWeek($firstDay);
         $this->tableHelper = new Calendar_Table_Helper($this, $this->firstDay);
         $this->thisWeek    = $this->tableHelper->getWeekStart($y, $m, $d, $this->firstDay);
         $this->prevWeek    = $this->tableHelper->getWeekStart(
-            $y, 
-            $m, 
+            $y,
+            $m,
             $d - $this->cE->getDaysInWeek(
                 $this->thisYear(),
                 $this->thisMonth(),
                 $this->thisDay()
-            ), 
+            ),
             $this->firstDay
         );
         $this->nextWeek = $this->tableHelper->getWeekStart(
-            $y, 
-            $m, 
+            $y,
+            $m,
             $d + $this->cE->getDaysInWeek(
                 $this->thisYear(),
                 $this->thisMonth(),
                 $this->thisDay()
-            ), 
+            ),
             $this->firstDay
         );
     }
@@ -180,23 +180,23 @@ class Calendar_Week extends Calendar
             $this->year, $this->month, $this->day, $this->firstDay
         );
         $this->prevWeek = $this->tableHelper->getWeekStart(
-            $this->year, 
-            $this->month, 
+            $this->year,
+            $this->month,
             $this->day - $this->cE->getDaysInWeek(
                 $this->thisYear(),
                 $this->thisMonth(),
                 $this->thisDay()
-            ), 
+            ),
             $this->firstDay
         );
         $this->nextWeek = $this->tableHelper->getWeekStart(
-            $this->year, 
-            $this->month, 
+            $this->year,
+            $this->month,
             $this->day + $this->cE->getDaysInWeek(
                 $this->thisYear(),
                 $this->thisMonth(),
                 $this->thisDay()
-            ), 
+            ),
             $this->firstDay
         );
     }

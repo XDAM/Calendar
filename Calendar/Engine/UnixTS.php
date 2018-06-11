@@ -39,7 +39,7 @@
  /**
   * Load Calendar_Engine_Interface interface class
   */
- require_once CALENDAR_ROOT.'Engine/Interface.php';
+ require_once CALENDAR_ROOT.'Engine'.DIRECTORY_SEPARATOR.'Interface.php';
 
 /**
  * Performs calendar calculations based on the PHP date() function and
