@@ -36,6 +36,11 @@
  * @link      http://pear.php.net/package/Calendar
  */
 
+ /**
+  * Load Calendar_Engine_Interface interface class
+  */
+ require_once CALENDAR_ROOT.'Engine/Interface.php';
+
 /**
  * Performs calendar calculations based on the PHP date() function and
  * Unix timestamps (using PHP's mktime() function).
@@ -48,7 +53,7 @@
  * @link      http://pear.php.net/package/Calendar
  * @access    protected
  */
-class Calendar_Engine_UnixTS /* implements Calendar_Engine_Interface */
+class Calendar_Engine_UnixTS implements Calendar_Engine_Interface
 {
     /**
      * Makes sure a given timestamp is only ever parsed once

@@ -100,9 +100,9 @@ class Calendar_Day extends Calendar
      *
      * @access public
      */
-    function Calendar_Day($y, $m, $d)
+    function __construct($y, $m, $d)
     {
-        parent::Calendar($y, $m, $d);
+        parent::__construct($y, $m, $d);
     }
 
     /**
@@ -187,7 +187,7 @@ class Calendar_Day extends Calendar
      * @return boolean
      * @access public
      */
-    function isFirst() 
+    function isFirst()
     {
         return $this->first;
     }

@@ -98,7 +98,7 @@ class Calendar_Util_Uri
      *
      * @access public
      */
-    function Calendar_Util_Uri($y, $m=null, $d=null, $h=null, $i=null, $s=null)
+    function __construct($y, $m=null, $d=null, $h=null, $i=null, $s=null)
     {
         $this->setFragments($y, $m, $d, $h, $i, $s);
     }
@@ -116,7 +116,7 @@ class Calendar_Util_Uri
      * @return void
      * @access public
      */
-    function setFragments($y, $m=null, $d=null, $h=null, $i=null, $s=null) 
+    function setFragments($y, $m=null, $d=null, $h=null, $i=null, $s=null)
     {
         if (!is_null($y)) $this->uris['Year']   = $y;
         if (!is_null($m)) $this->uris['Month']  = $m;

@@ -45,8 +45,8 @@
  * {
  *     function thisDay($format = 'int')
  *     {
-.*         $day = parent::thisDay('timestamp');
-.*         return date('D', $day);
+ *         $day = parent::thisDay('timestamp');
+ *         return date('D', $day);
  *     }
  * }
  * $Day = new Calendar_Day(2003, 10, 25);
@@ -76,7 +76,7 @@ class Calendar_Decorator
      *
      * @param object &$calendar subclass to Calendar to decorate
      */
-    function Calendar_Decorator(&$calendar)
+    function __construct(&$calendar)
     {
         $this->calendar = & $calendar;
     }

@@ -77,9 +77,9 @@ class Calendar_Year extends Calendar
      *
      * @access public
      */
-    function Calendar_Year($y)
+    function __construct($y)
     {
-        parent::Calendar($y);
+        parent::__construct($y);
     }
 
     /**
@@ -124,7 +124,7 @@ class Calendar_Year extends Calendar
      * @return void
      * @access private
      */
-    function setSelection($sDates) 
+    function setSelection($sDates)
     {
         foreach ($sDates as $sDate) {
             if ($this->year == $sDate->thisYear()) {

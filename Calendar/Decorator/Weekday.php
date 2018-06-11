@@ -88,9 +88,9 @@ class Calendar_Decorator_Weekday extends Calendar_Decorator
      *
      * @access public
      */
-    function Calendar_Decorator_Weekday(&$Calendar)
+    function __construct(&$Calendar)
     {
-        parent::Calendar_Decorator($Calendar);
+        parent::__construct($Calendar);
     }
 
     /**
@@ -101,7 +101,7 @@ class Calendar_Decorator_Weekday extends Calendar_Decorator
      * @return void
      * @access public
      */
-    function setFirstDay($firstDay) 
+    function setFirstDay($firstDay)
     {
         $this->firstDay = (int)$firstDay;
     }
@@ -178,7 +178,7 @@ class Calendar_Decorator_Weekday extends Calendar_Decorator
      * @return int day of week adjusted to first day
      * @access private
      */
-    function adjustWeekScale($dayOfWeek) 
+    function adjustWeekScale($dayOfWeek)
     {
         $dayOfWeek = $dayOfWeek - $this->firstDay;
         if ($dayOfWeek >= 0) {

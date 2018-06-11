@@ -89,7 +89,7 @@ class Calendar_Validator
      *
      * @access public
      */
-    function Calendar_Validator(&$calendar)
+    function __construct(&$calendar)
     {
         $this->calendar = & $calendar;
         $this->cE       = & $calendar->getEngine();
@@ -178,7 +178,7 @@ class Calendar_Validator
             return false;
         }
         $max = $this->cE->getDaysInMonth(
-            $this->calendar->thisYear(), 
+            $this->calendar->thisYear(),
             $this->calendar->thisMonth()
         );
         if ($d > $max) {
