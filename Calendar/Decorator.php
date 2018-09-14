@@ -78,7 +78,7 @@ class Calendar_Decorator
      */
     function __construct(&$calendar)
     {
-        $this->calendar = & $calendar;
+        $this->calendar = $calendar;
     }
 
     /**
